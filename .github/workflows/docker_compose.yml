@@ -12,7 +12,7 @@ jobs:
     - name: Set up Python 3.8
       uses: actions/setup-python@v5
       with:
-        python-version: 3.13
+        python-version: 3.14
     - name: Build the docker-compose stack
       run: |
         sudo apt -y install python3-setuptools git
