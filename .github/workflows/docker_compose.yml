@@ -8,11 +8,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
     - name: Set up Python 3.8
       uses: actions/setup-python@v6
       with:
-        python-version: 3.13
+        python-version: 3.14
     - name: Build the docker-compose stack
       run: |
         sudo apt -y install python3-setuptools git
