@@ -5,6 +5,11 @@ PYTHON = $(VENV)/bin/python3
 
 .PHONY: clean docker python
 
+bom:
+	. $(PY39)/bin/activate && \
+	pip install -r .admin/src/requirements.txt && \
+	python .admin/src/generate_bom.py -d ../recipes -o ../BOM.md
+	
 clean:
         rm -rf $(VENV)
         find . -type d -name "__pycache__" -exec rm -rf {} +
@@ -16,11 +21,6 @@ clean:
 		fi ; \
 	done
 	docker system prune -y
-
-docker:
-	@if [ -f /.dockerenv ]; then echo "Don't run make docker inside docker container" && exit 1; fi
-	docker-compose -f docker-compose.yml build hacker_cookbook
-	@docker-compose -f docker-compose.yml run hacker_cookbook /bin/bash
 
 lint:
         $(VENV)/bin/isort src/*.py
