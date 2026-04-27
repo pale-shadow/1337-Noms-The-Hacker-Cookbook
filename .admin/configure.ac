@@ -1,29 +1,23 @@
 AC_PREREQ([2.71])
-AC_INIT(hacker-cookbook, 1.0, franklin@dead10c5.org, https://github.com/DEAD10C5/1337-Noms-The-Hacker-Cookbook)
-AC_CONFIG_MACRO_DIR(config/m4)
-AC_CONFIG_AUX_DIR(config)
+AC_INIT([hacker-cookbook], [1.0], [smoooth.y62wj@passmail.net], [hacker-cookbook], [https://github.com/pale-shadow/1337-Noms-The-Hacker-Cookbook])
+AC_CONFIG_MACRO_DIR([config/m4])
+AC_CONFIG_AUX_DIR([config])
+
 AC_MSG_NOTICE([build directory: $ac_pwd])
-AC_SUBST(WORKDIR, $ac_pwd)
-
-AM_INIT_AUTOMAKE
-
-LT_INIT
-
+AC_SUBST([WORKDIR], [$ac_pwd])
+AM_INIT_AUTOMAKE([foreign])
 AC_CONFIG_COMMANDS([franklin-build],
  [echo "(⊃｡•‿•｡)⊃━⭑･ﾟﾟ･*:༅｡.｡༅:*ﾟ:*:✼✿ Configuring for $mypkgname ☽༓･*˚⁺‧"],
  [mypkgname=$PACKAGE_NAME])
 
 # Checks for programs.
-AC_PROG_CXX
-
 AC_PATH_PROG([PANDOC], [pandoc], [na])
 AC_PATH_PROG([SHFMT], [shfmt], [na])
 
-AM_PATH_PYTHON(3.9 ) # minimum version of Python
-PY39="python$PYTHON_VERSION" # define the python interpreter
-dnl LDFLAGS="$LDFLAGS -l$PY39"
-AC_SUBST(PY39, python$PYTHON_VERSION)
+# Minimum version of Python
+AM_PATH_PYTHON([3.9])
 
+# LaTeX tooling checks
 AC_LATEX_CLASS_ARTICLE
 AC_LATEX_CLASS_BOOK
 AC_LATEX_CLASS_REPORT
@@ -51,15 +45,15 @@ AC_PROG_PNMTOPS
 AC_PROG_JPEGTOPNM
 dnl AC_PROG_LATEX2PNG
 dnl AC_PROG_LATEX2RTF
-AC_PROG_PSBOOK
-AC_PROG_PSNUP
-AC_PROG_PSSELECT
-AC_PROG_PSRESIZE
+# AC_PROG_PSBOOK
+#AC_PROG_PSNUP
+#AC_PROG_PSSELECT
+#AC_PROG_PSRESIZE
 AC_PROG_DVIBOOK
 
 AC_CONFIG_FILES([
   Makefile
   latex/Makefile
-  ])
+])
 
 AC_OUTPUT

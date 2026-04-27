@@ -1,9 +1,8 @@
 CLOCAL_AMFLAGS = -I config/m4 -I aclocal
 ACLOCAL_AMFLAGS = -I config/m4 -I aclocal
 VENV = /tmp/venv
-PYTHON = $(VENV)/bin/python3
 
-.PHONY: clean docker python
+.PHONY: bom clean python
 
 bom:
 	. $(VENV)/bin/activate && \
@@ -11,7 +10,7 @@ bom:
 	$(PYTHON) src/generate_bom.py -d ../recipes -o ../BOM.md
 	
 clean:
-        rm -rf $(VENV)
+	rm -rf $(VENV)
         find . -type d -name "__pycache__" -exec rm -rf {} +
 	@for trash in aclocal.m4 autom4te.cache config config.log config.status configure configure~ \
 		libtool Makefile Makefile.in; do \
@@ -23,13 +22,12 @@ clean:
 	docker system prune -y
 
 lint:
-        $(VENV)/bin/isort src/*.py
-        $(VENV)/bin/black src/*.py
+	$(VENV)/bin/isort src/*.py
+	$(VENV)/bin/black src/*.py
 
 python: 
-	@$(PY39) -m venv $(VENV)
+	@$(PYTHON) -m venv $(VENV)
 	( \
 		. $(VENV)/bin/activate; \
-		$(PYTHON) -m pip install --upgrade pip; \
 		$(PYTHON) -m pip install -r src/requirements.txt; \
 	)
