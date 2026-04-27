@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.12-slim-bullseye
+FROM python:3.13-slim-bullseye
 
 LABEL org.opencontainers.image.authors="nilknarf <franklin@dead10c5.org>"
 LABEL org.opencontainers.image.source="https://github.com/DEAD10C5/1337-Noms-The-Hacker-Cookbook"
