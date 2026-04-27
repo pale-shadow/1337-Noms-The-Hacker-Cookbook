@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Mashed Potato Croquettes
 
 Contributed by Russ Rogers a.k.a. \@v3rtig0

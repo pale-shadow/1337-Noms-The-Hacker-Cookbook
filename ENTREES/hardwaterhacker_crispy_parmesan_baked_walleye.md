@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # \@hardwaterhacker's Crispy Parmesan Baked Walleye
 
 This recipe works great for walleye, crappie/sunfish/bluegill (a.k.a.

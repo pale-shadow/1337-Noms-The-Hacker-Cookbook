@@ -1,14 +1,14 @@
 CLOCAL_AMFLAGS = -I config/m4 -I aclocal
 ACLOCAL_AMFLAGS = -I config/m4 -I aclocal
-VENV = .venv
+VENV = /tmp/venv
 PYTHON = $(VENV)/bin/python3
 
 .PHONY: clean docker python
 
 bom:
-	. $(PY39)/bin/activate && \
-	pip install -r .admin/src/requirements.txt && \
-	python .admin/src/generate_bom.py -d ../recipes -o ../BOM.md
+	. $(VENV)/bin/activate && \
+	$(PYTHON) -m pip install -r src/requirements.txt && \
+	$(PYTHON) src/generate_bom.py -d ../recipes -o ../BOM.md
 	
 clean:
         rm -rf $(VENV)
@@ -27,9 +27,9 @@ lint:
         $(VENV)/bin/black src/*.py
 
 python: 
-	@$(PY39) -m venv .venv
+	@$(PY39) -m venv $(VENV)
 	( \
 		. $(VENV)/bin/activate; \
-		$(VENV)/bin/python -m pip install --upgrade pip; \
-		$(VENV)/bin/python -m pip install -r src/requirements.txt; \
+		$(PYTHON) -m pip install --upgrade pip; \
+		$(PYTHON) -m pip install -r src/requirements.txt; \
 	)
