@@ -1,0 +1,28 @@
+# Build Artifacts
+*.pdf
+*.log
+*.aux
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.ins
+
+# Python Environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Docker & Admin
+.admin/docker/.data/
+.admin/Makefile.in
+config.log
+config.status
+autom4te.cache/
+
+# Git & Large Files
+.git/
+.gitattributes
+*.lfs

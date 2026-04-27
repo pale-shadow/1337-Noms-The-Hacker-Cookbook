@@ -2,8 +2,8 @@ version: '3'
 services:
   hacker_cookbook:
     build:
-      context: ..
-      dockerfile: docker/Dockerfile
+      context: ../.admin
+      dockerfile: Dockerfile
       args:
         USER_ID: ${USER_ID:-0}
         GROUP_ID: ${GROUP_ID:-0}

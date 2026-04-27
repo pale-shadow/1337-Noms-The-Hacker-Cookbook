@@ -1,0 +1,193 @@
+
+%%%%%%%%%1%%%%%%%%%2%%%%%%%%%3%%%%%%%%%4%%%%%%%%%5
+% Bundled source file for the IFMTARG package 
+%--------1---------2---------3---------4---------5
+% Please see the accompanying README for author,
+% license, documentation and installation information
+%%%%%%%%%1%%%%%%%%%2%%%%%%%%%3%%%%%%%%%4%%%%%%%%%5
+
+\RequirePackage{filecontents}
+\begin{filecontents*}{ifmtarg.sty}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ifmtarg}[2018/04/16 v1.2b check for an empty argument]
+\begingroup
+\catcode`\Q=3
+\long\gdef\@ifmtarg#1{\@xifmtarg#1QQ\@secondoftwo\@firstoftwo\@nil}
+\long\gdef\@xifmtarg#1#2Q#3#4#5\@nil{#4}
+\long\gdef\@ifnotmtarg#1{\@xifmtarg#1QQ\@firstofone\@gobble\@nil}
+\endgroup
+\endinput
+\end{filecontents*}
+%%%%%%%%%1%%%%%%%%%2%%%%%%%%%3%%%%%%%%%4%%%%%%%%%5
+
+
+% Conditionally compile the documentation & generate the .ins file:
+\providecommand\documentationCompile{Y}
+\makeatletter
+\if\documentationCompile N
+  \expandafter\@@end
+\fi
+
+
+\begin{filecontents*}{ifmtarg.ins}
+%&latex
+\def\documentationCompile{N}
+\input ifmtarg.tex
+\csname@@end\endcsname
+\end{filecontents*}
+
+
+
+
+\makeatletter
+\documentclass[twocolumn]{ltxdoc}
+
+\usepackage{shortvrb}
+\MakeShortVerb\|
+\usepackage[it,medium]{titlesec}
+
+\usepackage{array,ifmtarg,bigfoot,fancyvrb}
+\usepackage[svgnames]{xcolor}
+\usepackage[colorlinks,linktocpage]{hyperref}
+
+\usepackage{geometry}
+\geometry{margin=2cm}
+
+\usepackage{tocloft,varwidth}
+\setcounter{tocdepth}{1}
+\def\tocwidthA{0.55}
+\def\tocwidthB{0.44}
+\def\cftpartfont{\scshape}
+\def\cftsecfont{\small}
+\cftbeforesecskip=0pt
+\def\cftpartleader{}
+\def\cftpartafterpnum{\cftparfillskip}
+\def\cftsecleader{}
+\def\cftsecafterpnum{\cftparfillskip}
+
+\DeclareRobustCommand\pkg{\textsf}
+\def\pkgopt#1{\texttt{[#1]}}
+\newcommand\chng[1]{\marginpar{\footnotesize\raggedright\textsf{#1}}}
+
+\def\PDF{\textsc{pdf}}
+\def\PS{\textsc{ps}}
+\def\DVI{\textsc{dvi}}
+\def\EPS{\textsc{eps}}
+
+\usepackage{amsmath,listings}
+\lstset{basicstyle=\ttfamily,columns=fullflexible}
+
+\usepackage{changepage}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage[sc,osf]{mathpazo}
+\linespread{1.1}
+\frenchspacing
+
+\GetFileInfo{ifmtarg.sty}
+\begin{document}
+{\addtocontents{toc}{\protect\begin{varwidth}[t]{\tocwidthA\linewidth}}}
+
+\title{The \pkg{ifmtarg} package}
+\author{%
+ Author: Donald Arseneau, and Peter Wilson, Herries Press\\
+ Maintainer: Will Robertson\\
+ \texttt{will dot robertson at latex-project dot org}%
+}
+\date{\fileversion \qquad \filedate}
+
+\maketitle
+
+\section{Documentation}
+
+The \pkg{ifmtarg} package provides an if--then--else programmer's command \verb|\@ifmtarg| for testing for an empty macro argument.
+`Empty' here refers to an argument of zero or more spaces only.\footnote{If you need a command to test for emptiness that doesn't include spaces, use the \verb|\tl_if_empty:nTF| conditional from the \pkg{expl3} package. \verb|\@ifmtarg| is equivalent to \pkg{expl3}'s \verb|\tl_if_blank:nTF|.}
+The command is fully expandable; its syntax is:
+\begin{quote}
+\cmd{\@ifmtarg}\marg{arg}\marg{Code for arg empty}
+\\\null\hfill
+\marg{Code for arg not empty}
+\end{quote}
+
+A variation is provided, \cmd{\@ifnotmtarg}, to be used when only the `false' branch is required.
+It is slightly more efficient when code is only required for a non-empty argument.
+\begin{quote}
+\cmd{\@ifnotmtarg}\marg{arg}\marg{Code for not empty}
+\end{quote}
+
+\section{Examples}
+
+\begin{verbatim}
+\newcommand\isempty[1]{\@ifmtarg{#1}{YES}{NO}}
+\end{verbatim}
+\nobreak
+\begin{tabular}{@{\hspace{1.8em}}>{\color{SeaGreen}}l@{$\quad\to\quad$}>{\ttfamily}l@{}}
+  \verb+\isempty{}+    & YES \\
+  \verb+\isempty{   }+ & YES \\
+  \verb+\isempty{E}+   & NO  \\
+  \verb+\isempty{ E }+ & NO
+\end{tabular}
+
+\begin{verbatim}
+\newcommand\isnotempty[1]{\@ifnotmtarg{#1}{YES}}
+\end{verbatim}
+\nobreak
+\begin{tabular}{@{\hspace{1.8em}}>{\color{SeaGreen}}l@{$\quad\to\quad$}>{\ttfamily}l@{}}
+  \verb+\isnotempty{}+    &     \\
+  \verb+\isnotempty{   }+ &     \\
+  \verb+\isnotempty{E}+   & YES \\
+  \verb+\isnotempty{ E }+ & YES
+\end{tabular}
+
+\newpage
+\section{History}
+
+(\emph{Peter's comments follow.}) In an Email to me on 13 March 2000, Donald Arseneau pointed out some
+failings with my original definition of the \cmd{\@ifmtarg} command:
+%
+\begin{verbatim}
+\newcommand{\@ifmtarg}[3]{%
+  \edef\@mtarg{\zap@space#1 \@empty}%  
+  \ifx\@empty\@mtarg\relax #2\else #3\fi}
+\end{verbatim}
+%
+It works most of the time correctly but Donald showed that it can 
+give unexpected results 
+under conditions that I had not thought of. He suggested the coding 
+that now appears in the package above for the \cmd{\@ifmtarg} and 
+\cmd{\@ifnotmtarg} commands. For a discussion on detecting empty arguments 
+see \href{http://www.ctan.org/pub/tex-archive/info/aro-bend/answer.002}{\texttt{CTAN/info/aro-bend/answer.002}}
+
+
+\section*{Change History}
+
+\begin{itemize}
+\item[v1.2a] New maintainer (Will Robertson)
+\item[v1.2b] Typo in documentation example code
+\end{itemize}
+
+
+
+\section*{Licence and copyright}
+  
+This work may be modified and/or distributed under the terms and
+conditions of the \LaTeX\ Project Public License\footnote{\url{http://www.latex-project.org/lppl.txt}}, version~1.3c or later (your choice).
+The current maintainer of this work is Will Robertson.
+
+\bigskip
+  \noindent
+  Copyright Peter Wilson, 1996 \\
+  Copyright Peter Wilson and Donald Arseneau, 2000
+
+{\addtocontents{toc}{\protect\end{varwidth}\protect\hfill}}
+{\addtocontents{toc}{\protect\begin{varwidth}[t]{\protect\tocwidthB\protect\linewidth}}}
+\clearpage
+\parindent=0pt
+
+\section{Implementation}
+\VerbatimInput{ifmtarg.sty}
+
+{\addtocontents{toc}{\protect\end{varwidth}}}
+
+\end{document}

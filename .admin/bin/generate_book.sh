@@ -33,6 +33,7 @@ MY_PWD="${PWD}"
 RAW_OUTPUT="${LOGGING_DIR}/generate_cookbook_${MY_DATE}.txt" # log file name
 TEX_DIR="/tmp/cookbook"
 TEX_OUTPUT="${TEX_DIR}/hacker_cookbook.tex"
+TEXMFHOME=$(kpsewhich -var-value=TEXMFHOME)
 
 function directory_setup() {
 
@@ -144,7 +145,7 @@ function main() {
   backmatter
 
   cp ${TEX_OUTPUT} ${MY_PWD}/.admin/tex
-  cd ${TEX_DIR} && latexmk -pdf -file-line-error -interaction=nonstopmode -synctex=1 -shell-escape hacker_cookbook
+  cd ${TEX_DIR} && latexmk -pdf -file-line-error -interaction=nonstopmode -synctex=1 --shell-escape hacker_cookbook
 
   cleanup
 }
