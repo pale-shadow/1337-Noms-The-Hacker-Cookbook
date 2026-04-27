@@ -59,7 +59,7 @@ AC_PROG_DVIBOOK
 
 AC_CONFIG_FILES([
   Makefile
-  tex/Makefile
-  ]) # files to generate, one per line
+  latex/Makefile
+  ])
 
 AC_OUTPUT
