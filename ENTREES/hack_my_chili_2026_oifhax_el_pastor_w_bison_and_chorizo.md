@@ -35,7 +35,7 @@ just your average Mexican Pastor boilermaker chili
 - 1 tablespoon Worcestershire sauce
 - 1 tablespoon dried oregano
 - 2 teaspoons ground cumin
-- 2 teaspoons hot pepper sauce (such as iHeartMalwar's)
+- 2 teaspoons hot pepper sauce (such as iHeartMalware's)
 - 1 teaspoon dried basil
 - 1 teaspoon cayenne pepper
 - 1 teaspoon paprika
