@@ -24,7 +24,7 @@
   - anaheim
   - ancho
   - cayenne
-  - (or any combination of poblanos and 6 other peppers from this list: http://chilipeppermadness.com/chili-pepper-types.html)
+   - (or any combination of poblanos and 6 other peppers from this list: <http://chilipeppermadness.com/chili-pepper-types.html>)
 - 1 - 14.5 oz can of diced tomatoes with juice (seasoned/spicy diced tomatoes work well)
 - 1.5 C tomatillo salsa
 - 5 C chicken broth (Better than Bouillon works well)
