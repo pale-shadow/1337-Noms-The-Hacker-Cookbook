@@ -52,3 +52,6 @@ These folks have added their recipes to the project, and their names to this fil
 - [@panadero](https://twitter.com/panadero) - Sausage balls
 - @tiptone - Mexican Martini
 - [leicynthia100](https://github.com/leicynthia100)
+- @OIFhx
+  - El Pastor Bison and chorizo chili
+  - Automations for recipe submittions
