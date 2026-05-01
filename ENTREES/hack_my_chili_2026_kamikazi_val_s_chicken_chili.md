@@ -78,6 +78,7 @@ This heating method is recommended for 1/2 recipe.  If you are making a full rec
 6. Monitor the water temperature, aiming to keep between 140F and 160F.  Add additional ice melt when needed
 
 SAFETY NOTES!
+
 - CaCl2 is very hydroscopic, and will dry out your hands if you handle it.  Remember to wear gloves
 - NEVER ADD WATER TO CaCl2 - only add CaCl2 to water.  Adding water to CaCl2 can cause localized heating / boiling
 - STIR and add slowly to the water to avoid clumping, which can result in uneven heating or waste of ice melt
