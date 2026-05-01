@@ -11,8 +11,8 @@ Best side dish ever
 
 ## Ingredients
 
-- 1 can corn
-- 1 can cream corn
+- 1 can (15 oz) corn
+- 1 can (14.75 oz) cream corn
 - 1 cup macaroni
 - 1 stick butter
 - 1/2 lb Velveeta
