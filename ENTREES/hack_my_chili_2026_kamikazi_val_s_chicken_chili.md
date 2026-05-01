@@ -41,7 +41,7 @@
 
 ## Instructions
 
-1. Heat 3T olive oil in a dutch oven under high heat.  Add onions and garlic, sautee 5 minutes until soft and fragrant
+1. Heat 3T olive oil in a dutch oven under high heat.  Add onions and garlic, sauté 5 minutes until soft and fragrant
 2. Add red and jalepeno petters and sautee over medium heat about 10 minutes  (add diced carrots if using)
 3. Stir in Chili powder, cumin, coriander, and cinnamon, sautee another 5 min.  Remove from heat
 4. Lightly salt the chicken, and place a large skillet over medium-high heat
