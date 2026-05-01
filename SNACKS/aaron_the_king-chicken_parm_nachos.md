@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Chicken Parm Nachos"
 author: ""
 date: "YYYY-MM-DD"
 prep_time: 0
@@ -7,16 +7,9 @@ cook_time: 0
 yield: ""
 difficulty: ""
 tags:
-  - 
-hardware:
-  - 
+  - snacks
 ---
 
-## Ingredients
-
-* ## Instructions
-
-1.
 # Chicken Parm Nachos
 
 Turn your leftover chicken parm into an exciting midnight snack!
