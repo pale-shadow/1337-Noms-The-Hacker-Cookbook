@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Marler's Quick Migas
 
 This is the migas that I make for me and my wife when I'm being lazy and

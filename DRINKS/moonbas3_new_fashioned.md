@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Moonbas3's New Fashioned
 
 ![Moonbas3 New Fashioned](images/moonbas3_new_fashioned.jpg)

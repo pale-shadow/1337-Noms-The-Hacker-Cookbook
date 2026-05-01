@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Elegin's Balsamic Tempeh
 
 This is the template to view your awesome recipe. If you view it as raw,

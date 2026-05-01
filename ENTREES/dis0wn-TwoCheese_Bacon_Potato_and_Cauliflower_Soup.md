@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # dis0wn's Two-Cheese Bacon Potato and Cauliflower Soup
 
 My variation of a traditional Irish soup. Serve with a hearty bread to

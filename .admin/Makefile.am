@@ -1,12 +1,16 @@
 CLOCAL_AMFLAGS = -I config/m4 -I aclocal
 ACLOCAL_AMFLAGS = -I config/m4 -I aclocal
-VENV = .venv
-PYTHON = $(VENV)/bin/python3
+VENV = /tmp/venv
 
-.PHONY: clean docker python
+.PHONY: bom clean python
 
+bom:
+	. $(VENV)/bin/activate && \
+	$(PYTHON) -m pip install -r src/requirements.txt && \
+	$(PYTHON) src/generate_bom.py -d ../recipes -o ../BOM.md
+	
 clean:
-        rm -rf $(VENV)
+	rm -rf $(VENV)
         find . -type d -name "__pycache__" -exec rm -rf {} +
 	@for trash in aclocal.m4 autom4te.cache config config.log config.status configure configure~ \
 		libtool Makefile Makefile.in; do \
@@ -17,19 +21,13 @@ clean:
 	done
 	docker system prune -y
 
-docker:
-	@if [ -f /.dockerenv ]; then echo "Don't run make docker inside docker container" && exit 1; fi
-	docker-compose -f docker-compose.yml build hacker_cookbook
-	@docker-compose -f docker-compose.yml run hacker_cookbook /bin/bash
-
 lint:
-        $(VENV)/bin/isort src/*.py
-        $(VENV)/bin/black src/*.py
+	$(VENV)/bin/isort src/*.py
+	$(VENV)/bin/black src/*.py
 
 python: 
-	@$(PY39) -m venv .venv
+	@$(PYTHON) -m venv $(VENV)
 	( \
 		. $(VENV)/bin/activate; \
-		$(VENV)/bin/python -m pip install --upgrade pip; \
-		$(VENV)/bin/python -m pip install -r src/requirements.txt; \
+		$(PYTHON) -m pip install -r src/requirements.txt; \
 	)
