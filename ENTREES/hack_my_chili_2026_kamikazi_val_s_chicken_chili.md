@@ -14,7 +14,7 @@
 - 4c chopped onion
 - 8 cloves chopped garlic
 - 4c sweet red peppers, diced
-- 4 Jalepenos, cleaned and diced
+- 4 Jalapeños, cleaned and diced
 - 4lbs chicken thighs, cut into 3/4" cubes
 - 5T Chili powder
 - 2.25t cumin seeds
