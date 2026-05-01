@@ -1,6 +1,6 @@
 # @Gr4vy's Corn Mac n Cheese
 
-Beat side dish ever
+Best side dish ever
 
 - Category: SIDES
 - Credit: @Gr4vy
@@ -15,11 +15,11 @@ Beat side dish ever
 - 1 can cream corn
 - 1 cup macaroni
 - 1 stick butter
-- 1/2 lb velveeta
+- 1/2 lb Velveeta
 
 ## Instructions
 
-1. Dump everything into a baking dish.   Do not drain corn.  You can cut the cheese into small pieces.  Bake at 350 for an hour,  stirring once.
+1. Dump everything into a baking dish. Do not drain corn. You can cut the cheese into small pieces. Bake at 350°F for an hour, stirring once.
 
 ## Notes
 
