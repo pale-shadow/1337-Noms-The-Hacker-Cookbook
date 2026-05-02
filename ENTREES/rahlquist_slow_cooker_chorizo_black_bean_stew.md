@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Rahlquist's Slow Cooker Chorizo Black Bean Stew
 
 A large batch (about 6 quart) of thick, hearty, protein rich, low carb

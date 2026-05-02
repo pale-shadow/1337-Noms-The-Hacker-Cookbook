@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # 1337-Noms-The-Hacker-Cookbook
 
 [![License: CC BY-ND 4.0 DEED](https://img.shields.io/badge/license-CC--4.0--ND-lightgrey)](https://creativecommons.org/licenses/by-nd/4.0/)
