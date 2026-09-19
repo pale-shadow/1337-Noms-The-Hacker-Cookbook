@@ -1,3 +1,26 @@
+---
+title: jcase's LowCarb North Carolina BBQ Sauce Recipe
+author: devsecfranklin
+date: YYYY-MM-DD
+prep_time: 5
+cook_time: 20
+yield: multiple servings
+difficulty: low
+tags:
+- low carb
+- BBQ sauce
+- North Carolina
+- sauce
+hardware:
+- sauce pan
+- mixing bowl
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # jcase's LowCarb North Carolina BBQ Sauce Recipe
 
 This sauce is a North Carolina inspired mop sauce, a thin tomato and

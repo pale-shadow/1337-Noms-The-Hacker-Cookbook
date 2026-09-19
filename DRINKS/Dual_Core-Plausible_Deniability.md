@@ -1,3 +1,28 @@
+---
+title: Dual Core's Plausible Deniability
+author: devsecfranklin
+date: YYYY-MM-DD
+prep_time: 5
+cook_time: 0
+yield: 1 serving
+difficulty: low
+tags:
+- cocktail
+- drink
+- vodka
+- grapefruit
+- pomegranate
+hardware:
+- shaker
+- pint glass
+- plate
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Dual Core's Plausible Deniability
 
 **Serving Size:** Time Travel, **Calories:** Hackerman
