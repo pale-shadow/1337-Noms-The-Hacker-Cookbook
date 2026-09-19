@@ -1,2 +1,3 @@
 mdformat
+google-genai
 PyYAML==6.0.3
