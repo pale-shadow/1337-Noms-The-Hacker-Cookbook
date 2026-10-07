@@ -4,6 +4,7 @@ _build/
 hacker_cookbook.tex
 **/logs/*
 **/_markdown_hacker_cookbook/*
+.envrc
 
 AUTHORS
 COPYING

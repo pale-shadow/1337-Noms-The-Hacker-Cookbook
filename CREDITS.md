@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Credits
 
 - [This link shows exactly who did and did not contribute on this project](https://github.com/DEAD10C5/1337-Noms-The-Hacker-Cookbook/graphs/contributors)

@@ -1,3 +1,26 @@
+---
+title: Elegin Vegan Tarter Sauce
+author: devsecfranklin
+date: YYYY-MM-DD
+prep_time: 5
+cook_time: 0
+yield: 4 servings
+difficulty: low
+tags:
+- vegan
+- tarter sauce
+- condiment
+- quick
+hardware:
+- mixing bowl
+- spoon
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # Elegin Vegan Tarter Sauce
 
 Simple Vegan tarter sauce. Quick and easy.

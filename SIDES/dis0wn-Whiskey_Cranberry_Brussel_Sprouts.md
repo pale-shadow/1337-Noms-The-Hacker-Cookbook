@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # dis0wn - Whiskey Cranberry Brussel Sprouts
 
 ![sprouts](images/dis0wn-Whiskey_Cranberry_Brussel_Sprouts.jpg)

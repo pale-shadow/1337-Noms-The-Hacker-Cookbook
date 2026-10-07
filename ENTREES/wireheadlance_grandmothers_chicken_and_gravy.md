@@ -1,3 +1,22 @@
+---
+title: ""
+author: ""
+date: "YYYY-MM-DD"
+prep_time: 0
+cook_time: 0
+yield: ""
+difficulty: ""
+tags:
+  - 
+hardware:
+  - 
+---
+
+## Ingredients
+
+* ## Instructions
+
+1.
 # wireheadlance's "Little Grandma's Famous Fried Chicken and Gravy"
 
 This is a recipe from wireheadlance's grandmother for fried chicken and
